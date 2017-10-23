@@ -9,7 +9,11 @@
 clear all
 close all hidden
 
-
+global struct fel_transported_BP
+fel_transported_BP.N_FEL = 0;
+% This number will be one larger than the N_FEL because of the call to
+% linace_lattice_solver at the end of fel_optimize_function.
+fel_transported_BP.N_LATTICE = 0;
 
 % Turn on the plots to see what the optimizer is doing.
 variables_struct.plots_on = 0;
