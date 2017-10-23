@@ -58,7 +58,7 @@ M = linac_lattice(variables_struct);
 Mf = M * X * M' ;
 
 f(1) = Mf(1,1) - variables_struct.matched_values(1,1);
-f(2) = Mf(1,2) ;
+f(2) = Mf(1,2) - variables_struct.matched_values(1,2);
 
 
 % -------------------------------------------------------------------------
